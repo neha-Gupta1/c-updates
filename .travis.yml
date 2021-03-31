@@ -4,6 +4,11 @@ language: node_js
  cache:
  directories:
  - node_modules
+ install:
+ - npm install 
  script:
+ ./update.sh
  - npm test
  - npm run build
+ after_script:
+ - rm payload.json 
