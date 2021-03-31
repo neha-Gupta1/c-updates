@@ -1,14 +1,10 @@
 language: node_js
- node_js:
- - "stable"
- cache:
- directories:
- - node_modules
- install:
- - npm install 
- script:
- ./update.sh
- - npm test
- - npm run build
- after_script:
- - rm payload.json 
+node_js:
+  - "stable"
+install:
+  - npm install -g @cyclonedx/bom
+script:
+  - npm run build
+  ./update.sh
+after_script:
+  - rm payload.json 
