@@ -4,7 +4,8 @@ node_js:
 install:
   - npm install
   - npm install -g @cyclonedx/bom
-
+before_script:
+  - npm install
 script:
   - npm run build
   ./update.sh
