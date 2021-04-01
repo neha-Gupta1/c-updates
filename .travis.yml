@@ -10,3 +10,4 @@ script:
   - cyclonedx-bom -o bom.xml --include-dev
   - echo BOM contents :: "
   - cat bom.xml
+  - echo "Completed Billing"
