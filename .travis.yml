@@ -8,7 +8,7 @@ script:
   - npm install -g @cyclonedx/bom 
   - echo "Generating a Bill  Of Materials here"
   - cyclonedx-bom -o bom.xml --include-dev
-  - echo "BOM contents :: "
+  - echo "BOM contents ::"
   - cat bom.xml
   - echo "Done Completed tracking"
   
