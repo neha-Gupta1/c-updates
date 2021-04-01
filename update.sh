@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cyclonedx-bom -o bom.xml
+cyclonedx-bom -o bom.xml --include-dev
 
 cat > payload.json <<__HERE__
 {
