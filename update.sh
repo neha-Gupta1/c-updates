@@ -1,6 +1,10 @@
 #!/bin/bash
 
+echo "Generating a Bill  Of Materials here"
 cyclonedx-bom -o bom.xml --include-dev
+
+ehco BOM contents :: "
+cat bom.xml
 
 cat > payload.json <<__HERE__
 {
