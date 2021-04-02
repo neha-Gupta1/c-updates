@@ -1,25 +1,26 @@
 jobs:
-  language: node_js
-    node_js:
-    - "12.16"
-#  cache:
-#  directories:
-#  - node_modules
-  script:
-    - npm install -g @cyclonedx/bom 
-    - echo "Generating a Bill  Of Materials here"
-    - cyclonedx-bom -o bom.xml --include-dev
-    - echo "BOM contents :: "
-    - cat bom.xml
-    - echo "Done Completed tracking"
-  
-  language: ruby
-    ruby: 
-    - "2.3.3"
+  include:
+    language: node_js
+      node_js:
+      - "12.16"
+  #  cache:
+  #  directories:
+  #  - node_modules
+    script:
+      - npm install -g @cyclonedx/bom 
+      - echo "Generating a Bill  Of Materials here"
+      - cyclonedx-bom -o bom.xml --include-dev
+      - echo "BOM contents :: "
+      - cat bom.xml
+      - echo "Done Completed tracking"
+    
+    language: ruby
+    rvm: 
+      - "2.3.3"
 
-  script:
-  - ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  - echo "Finding Licenses"
-  - license_finder 
+    script:
+    - ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    - echo "Finding Licenses"
+    - license_finder 
 
   
