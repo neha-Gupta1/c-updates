@@ -14,7 +14,10 @@ jobs:
   - language: ruby
     rvm: "2.3.3"
     script:
-    - ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    - echo "Gem Version is..."
+    - gem -v
+    - echo "Installing license finder ..."
+    - gem install license_finder
     - echo "Finding Licenses"
     - license_finder 
 
