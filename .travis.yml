@@ -1,11 +1,6 @@
 language: node_js
 node_js:
-  - "stable"
-install:
-  - npm install
-  - npm install -g @cyclonedx/bom
+  - "12.16"
 script:
-  - npm run build
+  - npm install -g @cyclonedx/bom 
   ./update.sh
-after_script:
-  - rm payload.json 
